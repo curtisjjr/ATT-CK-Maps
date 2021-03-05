@@ -1,0 +1,457 @@
+{
+	"name": "Ryuk (S0446)",
+	"versions": {
+		"attack": "8",
+		"navigator": "4.2",
+		"layer": "4.1"
+	},
+	"domain": "enterprise-attack",
+	"description": "Enterprise techniques used by Ryuk, ATT&CK software S0446 v1.0",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Office 365",
+			"Azure AD",
+			"AWS",
+			"GCP",
+			"Azure",
+			"SaaS",
+			"PRE",
+			"Network"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"showID": true,
+		"showName": true
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1134",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has attempted to adjust its token privileges to have the SeDebugPrivilege.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has attempted to adjust its token privileges to have the SeDebugPrivilege.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used the Windows command line to create a Registry entry under HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run to establish persistence.(Citation: CrowdStrike Ryuk January 2019)\n\nSets HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\n\\Windows\\CurrentVersion\\Run\\svchost  with Ryuk’s filepath as value.\n(Citation: CERT-FR CTI-006 02/2021)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used the Windows command line to create a Registry entry under HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run to establish persistence.(Citation: CrowdStrike Ryuk January 2019)\n\nSets HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\n\\Windows\\CurrentVersion\\Run\\svchost  with Ryuk’s filepath as value.\n(Citation: CERT-FR CTI-006 02/2021)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.003",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used cmd.exe to create a Registry entry to establish persistence.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1486",
+			"tactic": "impact",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used a combination of symmetric (AES) and asymmetric (RSA) encryption to encrypt files. Files have been encrypted with their own AES key and given a file extension of .RYK. Encrypted directories have had a ransom note of RyukReadMe.txt written to the directory.(Citation: CrowdStrike Ryuk January 2019)\n\nThe files are encrypted using Microsoft CryptoAPI with AES256 algorithm. A unique AES key is generated for each file.\nThe AES key is wrapped with a RSA public key stored in the binary code.\n\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has called GetLogicalDrives to emumerate all mounted drives, and GetDriveTypeW to determine the drive type.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has stopped services related to anti-virus.(Citation: FireEye Ryuk and Trickbot January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1490",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used vssadmin Delete Shadows /all /quiet to to delete volume shadow copies and vssadmin resize shadowstorage to force deletion of shadow copies created by third-party applications.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.005",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has constructed legitimate appearing installation folder paths by calling GetWindowsDirectoryW and then inserting a null byte at the fourth character of the path. For Windows Vista or higher, the path would appear as C:\\Users\\Public.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has used multiple native APIs including ShellExecuteW to run executables,GetWindowsDirectoryW to create folders, and VirtualAlloc, WriteProcessMemory, and CreateRemoteThread for process injection.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has called CreateToolhelp32Snapshot to enumerate all running processes.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has injected itself into remote processes to encrypt files using a combination of VirtualAlloc, WriteProcessMemory, and CreateRemoteThread.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has injected itself into remote processes to encrypt files using a combination of VirtualAlloc, WriteProcessMemory, and CreateRemoteThread.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1489",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has called kill.bat for stopping services, disabling services and killing processes.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Ryuk](https://attack.mitre.org/software/S0446) has called GetIpNetTable in attempt to identify all mounted drives and hosts that have Address Resolution Protocol (ARP) entries.(Citation: CrowdStrike Ryuk January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1210",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk]\nBefore mounting network shares via SMB enumeration Ryuk reads through the victim’s ARP table and sends a Wake-On-LAN paquet to each host in order to wake up powered off computers.\n\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1222",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1222.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk]\nThe malware can launch icacls <path> /grant Everyone:F /T /C /Q to delete every access-based restrictions on files and directories.\n\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1135",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk] \nNew variant has self-replication capabilities. The propagation is achieved by copying the executable on identified network shares.\nprivate IP ranges are scanned: • 10.0.0.0/8;\n• 172.16.0.0/16;\n• 192.168.0.0/16.\n(Citation: CERT-FR CTI-006 February 2021)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1563",
+			"tactic": "lateral-movement",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021.002",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk]\nFor each identified host, Ryuk will attempt to mount possible network shares using SMB enumeration.\n(Citation: CERT-FR CTI-006 February 2021)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.002",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.002",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.002",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "Multiple propagation scheduled tasks added with program binaries stored in C:\\Users\\Public \n\nAdds twenty to more than a hundred scheduled tasks were observed. Binaries are named using two types of conventions: xxxxxxxxrep.exe and xxxxxxxlan.exe.\nOn the compromised systems command line executions of the following type :\n– LAN: xxxxxxxlan.exe 8 LAN\n– REP: xxxxxxxrep.exe 9 REP\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1195",
+			"tactic": "initial-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1195.001",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk]\nRyuk malware is based on a randomly-chosen open source software which is then recompiled and backdoored.\n\nThe malicious code is stored in the resource 11/943 of the binary and encrypted with the RC4 algorithm using the\nkey pDkzˆq#+(2w&95.\nThe code contains the string Fuck def.\n\nNo mechanism for blocking the execution of the ransomware has been identified (MUTEX like or else).\n\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1195.002",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#74c476",
+			"comment": "[Ryuk]\nRyuk malware is based on a randomly-chosen open source software which is then recompiled and backdoored.\n\nThe malicious code is stored in the resource 11/943 of the binary and encrypted with the RC4 algorithm using the\nkey pDkzˆq#+(2w&95.\nThe code contains the string Fuck def.\n\nNo mechanism for blocking the execution of the ransomware has been identified (MUTEX like or else).\n\nCitation: CERT-FR CTI-006 February 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1550",
+			"tactic": "lateral-movement",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "Ryuk"
+		},
+		{
+			"label": "2/2021 Variant",
+			"color": "#74c476"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
