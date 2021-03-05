@@ -1,0 +1,594 @@
+{
+	"name": "TeamTNT (CISO-TI OSINT)",
+	"versions": {
+		"attack": "8",
+		"navigator": "4.2",
+		"layer": "4.1"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"AWS",
+			"Network",
+			"SaaS",
+			"Azure"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"showID": false,
+		"showName": true
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1098",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.006",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1547.006",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1580",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Deploys shell or ELF script. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.004",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Deploys shell or ELF script. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543.002",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1543.002",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Targets  exposed kubelet which allows anonymous access. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Disables security tools. Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Delete scripts, binaries, and clears shell history. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1559",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Disguises Process Name. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1571",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Access cloud creds via metatdata services and/or ssh, docker, K8s account creds. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1090.003",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1219",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Kubelets found in discovery  used to access other pods and containers. \n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1496",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "Cryptojacking & Cryptomining operations",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.001",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Security Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.001",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Security Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.001",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Security Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1072",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Security Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1072",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Aqua Security Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Scan internal network for Kubelets, use Kubelets API to list running pods and containers, and optain system info.\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1569",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Access cloud creds via metatdata services and/or ssh, docker, K8s account creds. PAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Attempts to access cloud creds fund in cloud environment. PAN 2/3/2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1497",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Attempt container breakout. Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1497",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Attempt container breakout. Aqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Establish TMate reverse shells and IRC channels for C2 on compromised containers.\n\nPAN 2/3/2021: https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/\n&\nAqua Sec, Sept. 2020: https://f.hubspotusercontent40.net/hubfs/1665891/Cloud%20Native%20Security%20Threat%20Report%2009-2020/Aqua_Security_Cloud_Native_Security_Threat_Report_2020.pdf",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#b7daff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"label": "Used by TeamTNT",
+			"color": "#66b1ff"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}

@@ -1,0 +1,790 @@
+{
+	"name": "Rocke (G0106)",
+	"versions": {
+		"attack": "8",
+		"navigator": "4.2",
+		"layer": "4.1"
+	},
+	"domain": "enterprise-attack",
+	"description": "Enterprise techniques used by Rocke, ATT&CK group G0106 v1.0",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Office 365",
+			"Azure AD",
+			"AWS",
+			"GCP",
+			"Azure",
+			"SaaS",
+			"PRE",
+			"Network"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"showID": true,
+		"showName": true
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) issued wget requests from infected systems to the C2.(Citation: Talos Rocke August 2018)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1071.001",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has executed wget and curl commands to Pastebin over the HTTPS protocol.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner has created UPX-packed files in the Windows Start Menu Folder.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner has created UPX-packed files in the Windows Start Menu Folder.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1037",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has installed an \"init.d\" startup script to maintain persistence.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1037",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has installed an \"init.d\" startup script to maintain persistence.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.004",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) used shell scripts to run commands which would obtain persistence and execute the cryptocurrency mining malware.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.006",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used Python-based malware to install and spread their coinminer.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543.002",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has installed a systemd service script to maintain persistence.\n\nThe LSD malware creates a systemd service to ensure it is restarted when the machine reboots.\n(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1543.002",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has installed a systemd service script to maintain persistence.\n\nThe LSD malware creates a systemd service to ensure it is restarted when the machine reboots.\n(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has extracted tar.gz files after downloading them from a C2 server.(Citation: Talos Rocke August 2018)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) exploited Apache Struts, Oracle WebLogic (CVE-2017-10271), and Adobe ColdFusion (CVE-2017-3066) vulnerabilities to deliver malware.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1222",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1222.002",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has changed file permissions of files so they could not be modified.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1564",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1564.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) downloaded a file \"libprocesshider\", which could hide files on the target system.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574.006",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has modified /etc/ld.so.preload to hook libc functions in order to hide the installed dropper and mining software in process lists.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574.006",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has modified /etc/ld.so.preload to hook libc functions in order to hide the installed dropper and mining software in process lists.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1574.006",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has modified /etc/ld.so.preload to hook libc functions in order to hide the installed dropper and mining software in process lists.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) used scripts which detected and uninstalled antivirus software.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562.004",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) used scripts which killed processes and added firewall rules to block traffic related to other cryptominers.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1070.006",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has changed the time stamp of certain files.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1070.004",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has deleted files on infected machines.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1070.002",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has cleared log files within the /var/log/ folder.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) used malware to download additional malicious files to the target system.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#e6550d",
+			"comment": "[Rocke]\nMiner configuration data is written to the /tmp folder along with a miner binary named kworkerds. The binary is named partially after a Linux kernel worker thread. Linux systems will execute processes named kworker all the time, but the processes will not use a binary in a /tmp folder.\nCitation: Red Canary Mar 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.005",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used shell scripts which download mining executables and saves them with the filename \"java\".(Citation: Talos Rocke August 2018)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) conducted scanning for exposed TCP port 7001 as well as SSH and Redis servers.(Citation: Talos Rocke August 2018)(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1571",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner connects to a C2 server using port 51640.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has modified UPX headers after packing files to break unpackers.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1027.002",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner has created UPX-packed files in the Windows Start Menu Folder.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1027.004",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has compiled malware, delivered to victims as .c files, with the GNU Compiler Collection (GCC).(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) can detect a running process's PID on the infected machine.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#e6550d",
+			"comment": "[Rocke]\nThe adversary uses a modified version of the libprocesshider project compiled as a shared object, the Linux equivalent of a Windows Dynamic-Link Library (DLL). To execute the code Rocke modifies /etc/ld.so.preload, a configuration file that will inject listed shared objects into executing processes on a Linux system.\nCitation: Red Canary Mar 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#e6550d",
+			"comment": "[Rocke]\nThe adversary uses a modified version of the libprocesshider project compiled as a shared object, the Linux equivalent of a Windows Dynamic-Link Library (DLL). To execute the code Rocke modifies /etc/ld.so.preload, a configuration file that will inject listed shared objects into executing processes on a Linux system.\nCitation: Red Canary Mar 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1055.002",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner, \"TermsHost.exe\", evaded defenses by injecting itself into Windows processes, including Notepad.exe.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1055.002",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106)'s miner, \"TermsHost.exe\", evaded defenses by injecting itself into Windows processes, including Notepad.exe.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021.004",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has spread its coinminer via SSH.(Citation: Anomali Rocke March 2019)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has looked for IP addresses in the known_hosts file on the infected system and attempted to SSH into them.(Citation: Talos Rocke August 2018)\t",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1496",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has distributed cryptomining malware.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1014",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has modified /etc/ld.so.preload to hook libc functions in order to hide the installed dropper and mining software in process lists.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.003",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) installed a cron job that downloaded and executed files from the C2.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.003",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) installed a cron job that downloaded and executed files from the C2.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.003",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) installed a cron job that downloaded and executed files from the C2.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1518",
+			"tactic": "discovery",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1518.001",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) used scripts which detected and uninstalled antivirus software.(Citation: Talos Rocke August 2018)(Citation: Unit 42 Rocke January 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used uname -m to collect the name and information about the infected system's kernel.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1552.004",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used SSH private keys on the infected machine to spread its coinminer throughout a network.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used Pastebin, Gitee, and GitLab for Command and Control.(Citation: Anomali Rocke March 2019)(Citation: Talos Rocke August 2018)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1102.001",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[Rocke](https://attack.mitre.org/groups/G0106) has used Pastebin to check the version of beaconing malware and redirect to another Pastebin hosting updated malware.(Citation: Anomali Rocke March 2019)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1546",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1546.004",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nEntries to “.bashrc” is added to for persistence.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1546.004",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nEntries to “.bashrc” is added to for persistence.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#e6550d",
+			"comment": "[Rocke]\nAfter these process stopping commands, Rocke conducts additional reconnaissance to determine if unknown miners are executing on the system using the netstat command. By stringing the output of netstat together with text searches, the actor searches for additional processes to stop.\nCitation: Red Canary Mar 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1569",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nThe LSD malware uses stored ssh keys on the infected host to gain access to other machines.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nThe LSD malware uses stored ssh keys on the infected host to gain access to other machines.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nThe LSD malware uses stored ssh keys on the infected host to gain access to other machines.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#a1d99b",
+			"comment": "[Rocke]\nThe LSD malware uses stored ssh keys on the infected host to gain access to other machines.\nCitation: Anomali Oct 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "MITRE"
+		},
+		{
+			"label": "RedCanary",
+			"color": "#e6550d"
+		},
+		{
+			"label": "Anomali",
+			"color": "#a1d99b"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}

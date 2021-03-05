@@ -1,0 +1,281 @@
+{
+	"name": "BlackTech (G0098)",
+	"versions": {
+		"attack": "8",
+		"navigator": "4.2",
+		"layer": "4.1"
+	},
+	"domain": "enterprise-attack",
+	"description": "Enterprise techniques used by BlackTech, ATT&CK group G0098 v1.0",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Office 365",
+			"Azure AD",
+			"AWS",
+			"GCP",
+			"Azure",
+			"SaaS",
+			"PRE",
+			"Network"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"showID": true,
+		"showName": true
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has exploited a buffer overflow vulnerability in Microsoft Internet Information Services (IIS) 6.0, CVE-2017-7269, in order to establish a new HTTP or command and control (C2) server.(Citation: TrendMicro BlackTech June 2017)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has exploited multiple vulnerabilities for execution, including Microsoft Office vulnerabilities CVE-2012-0158, CVE-2014-6352, CVE-2017-0199, and Adobe Flash CVE-2015-5119.\nBlackTech group has exploited a vulnerable update mechanism in ASUS WebStorage software in order to deploy Plead malware in some networks.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.002",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has used right-to-left-override to obfuscate the filenames of malicious e-mail attachments.(Citation: TrendMicro BlackTech June 2017)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.002",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has used spearphishing e-mails with links to cloud services to deliver malware.(Citation: TrendMicro BlackTech June 2017)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.001",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has used spearphishing e-mails with malicious documents to deliver malware.(Citation: TrendMicro BlackTech June 2017)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204.001",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has used e-mails with malicious links to lure victims into installing malware.(Citation: TrendMicro BlackTech June 2017)\t ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204.002",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[BlackTech](https://attack.mitre.org/groups/G0098) has used e-mails with malicious documents to lure victims into installing malware.(Citation: TrendMicro BlackTech June 2017)\t ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware uses HTTP for communication with its C&C.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware might drop a second stage loader in the Start Menu's startup folder.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1547.001",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware might drop a second stage loader in the Start Menu's startup folder.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1587",
+			"tactic": "resource-development",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1587.002",
+			"tactic": "resource-development",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Some Plead malware samples are signed with stolen certificates.\nCitation: ESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1041",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Data exfiltration is done using the already opened channel with the C&C server.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware allows attackers to obtain a list of files.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware allows attackers to upload and download files from its C&C.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware encrypts its payloads with the RC4 algorithm.\nCitation: ESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "Plead malware allows attackers to obtain a list of running processes on a system.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1552.001",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "#fce93b",
+			"comment": "BlackTech can deploy a module that steals credentials from the victim's browser and email clients.\nESET May 2019",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "MITRE"
+		},
+		{
+			"label": "ESET",
+			"color": "#fce93b"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
