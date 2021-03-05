@@ -1,0 +1,435 @@
+{
+	"name": "HAFNIUM",
+	"versions": {
+		"attack": "8",
+		"navigator": "4.2",
+		"layer": "4.1"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Office 365",
+			"Azure AD",
+			"AWS",
+			"GCP",
+			"Azure",
+			"SaaS",
+			"PRE",
+			"Network"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"showID": true,
+		"showName": true
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1583",
+			"tactic": "resource-development",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1583.003",
+			"tactic": "resource-development",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nUses leased Virtual Private Servers (VPSs) in the United States to operate its threat campaign. Adversaries rent VPSs to make it difficult to bind operations back to them physically. They are also enabled to swiftly provision, modify, and shut down their infrastructure through VPSs.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1071.001",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nThe HAFNIUM threat group communicates with deployed web shells using application-layer web protocols (HTTP/HTTPS). Adversaries use these protocols for C2 to avoid detection and network filtering. \n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1560.001",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nAdversaries may use several utilities such as 7-Zip, WinRAR, and WinZip to compress or encrypt data before exfiltration. Among these utilities, HAFNIUM uses WinRar and 7-Zip to compress data to be exfiltrated.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1560.002",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nHAFNIUM adds and uses Exchange PowerShell snap-ins to export data in mailboxes. Adversaries may access external-facing Exchange services to access emails and collect sensitive information by leveraging valid accounts, access tokens, or remote exploits. \n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 0.33,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.001",
+			"tactic": "execution",
+			"score": 0.75,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059.003",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nWeb shells used by the HAFNIUM threat group, such as China Chopper, allow adversaries to execute commands on the victim server using Windows Command Shell (cmd.exe), the primary command prompt on Windows systems.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1136.002",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nAdds new domain accounts and grant privileges to these accounts to maintain access in the future. \n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1074.002",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1114",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1114.001",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nUses Exchange snap-ins to collect emails. \n\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1567.002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nAdversaries may exfiltrate data to cloud storage that allows upload, modify and retrieve files. HAFNIUM exfiltrates collected data to cloud file sharing like MEGA.io.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nExploits CVE-2021-26855, CVE-2021-26857, CVE-2021-26858, and CVE-2021-27065 vulnerabilities in the Internet-facing and vulnerable Microsoft Exchange servers for initial access. \n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1592",
+			"tactic": "reconnaissance",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1592.002",
+			"tactic": "reconnaissance",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nThreat actor determines whether an Exchange server is running on the machine, and if so, which version is running. Adversaries collect information about installed software on a victim machine, which may be used for targeting.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1589",
+			"tactic": "reconnaissance",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1589.002",
+			"tactic": "reconnaissance",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1590",
+			"tactic": "reconnaissance",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1590.002",
+			"tactic": "reconnaissance",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.005",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nAdversaries may masquerade names/locations of their artifacts as identical or similar names/locations of legitimate files to evade monitoring and detection. HAFNIUM masquerade names of deployed web shells as identical or similar names of legitimate files, such as log.aspx, logout.aspx, default.aspx, errorPage.aspx, and server.aspx. \n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003.001",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nThere are many information sources targeted by attackers to dump credentials. As one of them, The Local Security Authority Subsystem Service (LSASS) stores credentials of the logged-in users in memory to provide seamless access to network resources without re-entering their credentials. Adversaries interact with the lsass.exe process and dump its memory to obtain credentials. Several methods and tools can be utilized to dump credentials in memory. The HAFNIUM threat actor uses Procdump to dump the LSASS process memory and gather credentials.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003.003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nHAFNIUM creates and steals copies of the NTDS.dit file using deployed web shells. The NTDS.dit file is the Active Directory Domain Services (AD DS) database that contains AD data, including information about user objects, groups, and group membership. NTDS.dit database also includes the password hashes for all users in the domain.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 0.66,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1588",
+			"tactic": "resource-development",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1588.002",
+			"tactic": "resource-development",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nThreat group uses the following tools to help its post-compromise behaviors:\nProcdump, Nishang, PowerCat, PsExec, Covenant (C&C), SIMPLESEESHARP, SPORTSBALL, China Chopper, ASPXSPY, 7-Zip, Winrar, and Exchange Snap-ins.\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021.002",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nUses PsExec to move laterally through the target environment. PsExec is a legitimate Windows SysInternals tool used by attackers to run commands on the remote system by leveraging network shares or valid accounts\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1505",
+			"tactic": "persistence",
+			"score": 0.7,
+			"color": "",
+			"comment": "[HAFNIUM]\nCitation: Josh Campbell, Cyborg Security, March 11, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1505.003",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "[HAFNIUM]\nAdversaries use web shells, web scripts placed on web servers,  as backdoors to establish persistency on the target server. HAFNIUM utilize the following web shells:\n\nSIMPLESEESHARP\nSPORTSBALL\nChina Chopper\nASPXSPY\n\nCitation: Süleyman Özarslan, PhD & Picus Labs | March 10, 2021",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
